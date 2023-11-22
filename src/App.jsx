@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { NavLink, HashRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
+import Home from './Home.jsx';
 import ShoppingList from './ShoppingList.jsx';
 import './style.css';
 
@@ -26,8 +27,8 @@ function App () {
         //     </div>
         // </>
         <HashRouter>
-            <NavLink to="/shoppingList">体验 Demo</NavLink>
             <Routes>
+                <Route path="/" element={<Home/>} />
                 <Route path="/shoppingList" element={<ShoppingList/>} />
             </Routes>
         </HashRouter>
